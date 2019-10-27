@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>First Lesson - Fourth Task</title>
+</head>
+<body>
+	<ul>
+		<li><a href="first.html">Первое задание</a></li>
+		<li><a href="second.html">Второе задание</a></li>
+		<li><a href="third.html">Третье задание</a></li>
+		<li><b>Четвертое задание</b></li>
+	</ul>
+	<form>
+		<label for="username">User name:</label>
+		<input type="text" name="username" id="username">
+		<br>
+		<label for="useremail">E-mail:</label>
+		<input type="email" name="useremail" id="useremail">
+		<br>
+		<label for="userpassword">Password:</label>
+		<input type="password" name="userpassword" id="userpassword">
+		<br>
+		<label>Sex:</label>
+		<input type="radio" name="usersex" value="M" id="usersexmale">Male<input type="radio" name="usersex" value="F" id="usersexfemale">Female
+		<br>
+		<label for="userage">Age:</label>
+		<input type="number" name="userage" id="userage">
+		<br>
+		<label for="usermarried">Married:</label>
+		<input type="checkbox" name="usermarried" id="usermarried">
+		<br>
+		<label for="userphone">Phone:</label>
+		<input type="tel" name="userphone" id="userphone" pattern="\+38\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}">
+		<br>
+		<label for="usercity">City:</label>
+		<select name="usercity" id="usercity">
+			<option value="Kharkiv">Харьков</option>
+			<option value="NoKharkov">Не Харьков</option>
+		</select>
+		<br>
+		<label for="userabout">About:</label>
+		<textarea name="userabout" id="userabout" cols="30" rows="10"></textarea>
+		<br>
+		<input type="submit" name="save" value="Save">
+	</form>
+</body>
+</html>
