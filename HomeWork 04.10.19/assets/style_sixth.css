@@ -1,0 +1,158 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	padding: 0px;
+}
+
+body {
+	max-width: 700px;
+	box-shadow: 0 0 5px grey;
+	margin: 20px auto;
+	font-family: 'Arial';
+}
+
+header {
+	background-color: #fcf7eb;
+	color: #4a4a4a;
+	padding: 20px;
+	border-bottom: 1px #b5b5b5 solid;
+}
+
+header h1 {
+	margin: 0;
+}
+
+main {
+	background-color: #fcf7eb;
+	padding: 20px;
+}
+
+input, select, textarea {
+	border: none;
+	height: 23px;
+	font-family: 'Arial';
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	padding-left: 5px;
+}
+
+textarea {
+	resize: vertical;
+	height: 150px;
+}
+
+div.item {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 10px;
+}
+
+div.item label {
+	float: left;
+	min-width: 140px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #6b6b6b;
+	margin-top: 10px;
+}
+
+div.required label:after {
+	content: ' *';
+	color: red;
+}
+
+div.field-item {
+	padding: 5px;
+	flex: 1;
+}
+
+.field-item .fields-h .field-item:first-child {
+	padding-left: 0;
+}
+
+.field-item .fields-h .field-item:last-child {
+	padding-right: 0;
+}
+
+div.field-item label.hint {
+	font-size: 10px;
+	font-weight: normal;
+	margin-top: 3px;
+	margin-left: 5px;
+	min-width: 50px;
+}
+
+label.hint:after {
+	display: none;
+}
+
+div.item div.fields-h {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+}
+
+div.item div.fields-v {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.item .fields-h .field-item {
+	display: flex;
+	flex-direction: column;
+}
+
+div.radio-field input {
+	float: left;
+	box-shadow: none;
+}
+
+div.radio-field label {
+	color: grey;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+div.radio-field label:after {
+	display: none;
+}
+
+button {
+	margin: 0 auto;
+	background: linear-gradient(#ffa200, #ff7300);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	border-style: outset;
+    border-color: #ff7300;
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    border-width: 1px;
+    width: 70px;
+    height: 30px;
+}
+
+.button {
+	text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+	div.item {
+		flex-direction: column;
+	}
+
+	div.item .fields-h .field-item {
+		padding-left: 0;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	div.item div.fields-h {
+		flex-direction: column;
+	}
+
+	.field-item .fields-h .field-item {
+		padding-right: 0;
+	}
+}

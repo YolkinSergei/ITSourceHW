@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Third lesson - Sixth task</title>
+	<link rel="stylesheet" href="./assets/style_sixth.css">
+</head>
+<body>
+	<header>
+		<h1>Hotel Booking</h1>
+	</header>
+	<main>
+		<div class="item required">
+			<label>Name</label>
+			<div class="fields-h">
+				<div class="field-item">
+					<input type="text">
+					<label class="hint">First Name</label>	
+				</div>
+				<div class="field-item">
+					<input type="text">
+					<label class="hint">Last Name</label>	
+				</div>
+			</div>			
+		</div>
+		<div class="item required">
+			<label>E-mail</label>
+			<div class="fields-h">
+				<div class="field-item">
+					<input type="email" placeholder="ex: myname@example.com">
+					<label class="hint">example@example.com</label>	
+				</div>
+			</div>			
+		</div>
+		<div class="item">
+			<label>Room Type</label>
+			<div class="fields-h">
+				<div class="field-item">
+					<select>
+						<option value="Type1">Type 1</option>
+						<option value="Type2">Type 2</option>
+						<option value="Type3">Type 3</option>
+					</select>
+				</div>
+			</div>			
+		</div>
+		<div class="item required">
+			<label>Number of Guest</label>
+			<div class="fields-h">
+				<div class="field-item">
+					<input type="number">
+				</div>
+				<div></div>
+			</div>			
+		</div>
+		<div class="item required">
+			<label>Arrival Date & Time</label>
+			<div class="fields-h">
+				<div class="field-item">
+					<input type="text">
+					<div>
+						<div class="fields-h">
+							<div class="field-item">
+								<select>
+									
+								</select>
+								<label class="hint">Hour</label>
+							</div>
+							<div class="field-item">
+								<select>
+									
+								</select>
+								<label class="hint">Minutes</label>
+							</div>
+							<div class="field-item">
+								<select>
+									
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+
+		<div class="item required">
+			<label>Departure Date</label>
+			<div class="fields-h">
+				<div class="field-item">
+					<select>
+						
+					</select>
+					<label class="hint">Month</label>
+				</div>
+				<div class="field-item">
+					<select>
+						
+					</select>
+					<label class="hint">Day</label>
+				</div>
+				<div class="field-item">
+					<select>
+						
+					</select>
+					<label class="hint">Year</label>
+				</div>
+			</div>			
+		</div>
+
+		<div class="item required">
+			<label>Free pickup?</label>
+			<div class="fields-v">
+				<div class="radio-field">
+					<input type="radio" id="rbYes" name="freePickup">
+					<label for="rbYes">Yes Please! - Pick me up on arrival</label>
+				</div>
+				<div class="radio-field">
+					<input type="radio" id="rbNo" name="freePickup">
+					<label for="rbYes">No Thanks - I'll make my own way there</label>
+				</div>
+			</div>			
+		</div>
+
+		<div class="item">
+			<label>Flight Number</label>
+			<div class="fields-h">
+				<div class="field-item">
+					<input type="text">
+				</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<label>Special Requests</label>
+			<div class="fields-h">
+				<div class="field-item">
+					<textarea></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="button">
+			<button>Submit</button>	
+		</div>
+	</main>
+</body>
+</html>

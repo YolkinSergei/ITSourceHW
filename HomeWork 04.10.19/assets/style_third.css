@@ -1,0 +1,45 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	padding: 0px;
+}
+
+body {
+	margin: 0px;
+}
+
+div p {
+	margin: 0px;
+	text-align: justify;
+	padding: 10px;
+}
+
+div.main-container {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	box-shadow: 0 0 5px grey;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+div.center-container {
+	display: flex;
+	flex-direction: row;
+}
+
+div.container {
+	display: flex;
+	flex-direction: column;
+}
+
+div.content-columns {
+	display: flex;
+	flex-direction: row;
+}
+
+img {
+	max-width: 100%;
+}

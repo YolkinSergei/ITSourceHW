@@ -1,0 +1,36 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	padding: 0px;
+}
+
+body {
+	margin: 0px;
+}
+
+p {
+	margin: 0px;
+}
+
+div.container {
+	width: 50%;
+	box-shadow: 0 0 5px grey;
+	margin: 0 auto;
+}
+
+div.container p {
+	text-align: justify;
+	padding: 20px;
+}
+
+div.column {
+	width: calc(100%/3);
+	float: left;
+}
+
+
+img {
+	max-width: 100%;
+}
