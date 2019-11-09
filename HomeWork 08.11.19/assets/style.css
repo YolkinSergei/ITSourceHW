@@ -1,0 +1,30 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	padding: 0px;
+}
+
+body {
+	margin: 0px;
+}
+
+.main-container {
+	width: 90%;
+	box-shadow: 0 0 5px grey;
+	margin: 20px auto;
+	padding: 20px 120px;
+    text-align: center;
+}
+
+.diagram {
+	display: inline-flex;
+	flex-direction: row;
+	align-items: flex-end;
+	text-align: center;
+}
+
+div.diagram-column {
+	text-align: center;
+}
