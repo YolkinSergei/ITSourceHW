@@ -1,29 +1,25 @@
 //'use strict';
 
 function Figure (x, y, color = 'white') {
-	this.beginX = x;
-	this.beginY = y;
-	this.color = color;
+	x = x;
 
 	this.draw = (ctx) => {
 		ctx.beginPath();
 
-		ctx.fillStyle = this.color;
-		ctx.strokeStyle = this.color;
+		ctx.fillStyle = color;
+		ctx.strokeStyle = color;
 	}
 }
 
-function Line(x1, y1, x2, y2, color) {
-	Figure.call(this, x1, y1, color);
-	this.endX = x2;
-	this.endY = y2;
+function Line(x, y, x2, y2, color) {
+	Figure.call(this, x, y, color);
 
 	let _parentDraw = this.draw;
 	this.draw = function(ctx) {
 		_parentDraw.call(this, ctx);		
 
-		ctx.moveTo(this.beginX, this.beginY);
-		ctx.lineTo(this.endX, this.endY);
+		ctx.moveTo(x, y);
+		ctx.lineTo(x2, y2);
 		ctx.stroke();
 
 		ctx.strokeStyle = null;
@@ -32,13 +28,12 @@ function Line(x1, y1, x2, y2, color) {
 
 function Circle(x, y, r, color) {
 	Figure.call(this, x, y, color);
-	this.r = r;
 
 	let _parentDraw = this.draw;
 	this.draw = function(ctx) {
 		_parentDraw.call(this, ctx);
 
-		ctx.arc(this.beginX, this.beginY, this.r, 0, 2 * Math.PI);
+		ctx.arc(x, y, r, 0, 2 * Math.PI);
 		ctx.fill();
 		ctx.stroke();
 	}		
@@ -46,42 +41,32 @@ function Circle(x, y, r, color) {
 
 function QuarterCircle(x, y, r, color, degreeStart, degreeEnd) {
 	Figure.call(this, x, y, color);
-	this.r = r;
-	this.degreeStart = degreeStart;
-	this.degreeEnd = degreeEnd;
 
 	let _parentDraw = this.draw;
 	this.draw = function(ctx) {
 		_parentDraw.call(this, ctx);
 
-		ctx.moveTo(this.beginX, this.beginY);
-		ctx.arc(this.beginX, this.beginY, this.r, this.degreeStart, this.degreeEnd, false);
+		ctx.moveTo(x, y);
+		ctx.arc(x, y, r, degreeStart, degreeEnd, false);
 		ctx.closePath();
 		ctx.fill();
 		ctx.stroke();
 	}		
 }
 
-function Rect(x, y, w, h, color) {
+function Rect(x, y, width, height, color) {
 	Figure.call(this, x, y, color);
-	this.w = w;
-	this.h = h;
 
 	let _parentDraw = this.draw;
 	this.draw = function(ctx) {
 		_parentDraw.call(this, ctx);
 
-		ctx.fillRect(this.beginX, this.beginY, this.w, this.h);
+		ctx.fillRect(x, y, width, height);
 	}		
 }
 
 function Text(text, x, y, color, font, degree) {
 	Figure.call(this, x, y, color);
-	/*this.degree = degree;
-	this.text = text;
-	this.font = font;
-	this.translateX = translateX;
-	this.translateY = translateY;*/
 
 	let _parentDraw = this.draw;
 	this.draw = function(ctx) {
@@ -122,12 +107,10 @@ function Canvas (id, width, height) {
 	}
 }
 
-function getRandomColor() {
-	return 'rgb(' 
+let getRandomColor = () => ( 'rgb(' 
 		+ parseInt(Math.random() * 255) + ', ' 
 		+ parseInt(Math.random() * 255) + ', ' 
-		+ parseInt(Math.random() * 255) + ')';
-}
+		+ parseInt(Math.random() * 255) + ')');
 
 var drawArea = new Canvas('canvasID', 600, 450);
 
